@@ -421,6 +421,133 @@ article {
   }
 }
 
+/* ==================== RESPONSIVE UNTUK HP DAN TABLET ==================== */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav li {
+    padding: 8px 0;
+  }
+
+  .grid-about,
+  .grid-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-event,
+  .grid-home {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-home,
+  .card-event {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-img1,
+  .home-img2,
+  .event-img,
+  .about-img,
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .home-txt,
+  .event-txt {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image img {
+    width: 200px;
+  }
+
+  .profile-info {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .grid-about,
+  .grid-gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .home-txt,
+  .event-txt {
+    font-size: 18px;
+  }
+
+  .img-head {
+    height: 100px;
+  }
+
+  .img-head-ft {
+    height: 80px;
+  }
+
+  .scroll-top-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+}
+
+/* Small devices (max-width: 480px) */
+@media (max-width: 480px) {
+  header {
+    font-size: 20px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  .scroll-top-btn {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .home-txt,
+  .event-txt {
+    font-size: 16px;
+  }
+
+  .profile-image img {
+    width: 150px;
+  }
+
+  .profile-container {
+    padding: 1rem;
+  }
+}
 
 
 
