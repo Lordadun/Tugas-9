@@ -322,232 +322,132 @@ article {
 }
 /* CONTACT */
 
-/* RESPONSIVE DESIGN */
+/* ==================== RESPONSIVE FIX UNTUK ABOUT, EVENT, GALLERY, CONTACT ==================== */
 
-/* Untuk tablet landscape dan layar kecil (>= 992px) */
 @media (max-width: 992px) {
+  /* Grid kolom dikurangi di layar medium */
   .grid-about {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-event {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .grid-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .profile-image img {
-    width: 200px;
-  }
-
-  .home-img1,
-  .home-img2,
-  .event-img,
-  .about-img,
-  .gallery-img {
-    height: auto;
-    width: 100%;
-  }
-}
-
-/* Untuk layar mobile (>= 768px) */
-@media (max-width: 768px) {
-  .grid-about {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .grid-gallery {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .grid-home {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .card-home,
-  .card-event {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home-txt,
-  .event-txt {
-    font-size: 20px;
-    padding: 15px;
-  }
-
-  .img-head {
-    height: 100px;
-  }
-
-  .img-head-ft {
-    height: 80px;
-  }
-}
-
-/* Untuk layar sangat kecil (<= 480px) */
-@media (max-width: 480px) {
-  header {
-    font-size: 22px;
-  }
-
-  a {
-    font-size: 16px;
-  }
-
-  .scroll-top-btn {
-    padding: 10px;
-    font-size: 16px;
-    bottom: 15px;
-    right: 15px;
-  }
-}
-
-/* ==================== RESPONSIVE UNTUK HP DAN TABLET ==================== */
-
-/* Tablet (max-width: 992px) */
-@media (max-width: 992px) {
-  header {
-    flex-direction: column;
-    font-size: 24px;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  nav li {
-    padding: 8px 0;
-  }
-
-  .grid-about,
-  .grid-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .grid-event,
-  .grid-home {
+  .grid-gallery {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .card-home,
-  .card-event {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home-img1,
-  .home-img2,
-  .event-img,
-  .about-img,
-  .gallery-img {
-    width: 100%;
-    height: auto;
+  .card-about,
+  .card-event,
+  .card-gallery {
     padding: 15px;
   }
 
-  .home-txt,
+  .about-img,
+  .event-img,
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 0;
+  }
+
   .event-txt {
-    font-size: 20px;
     padding: 20px;
+    font-size: 22px;
   }
 
   .profile-card {
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
 
   .profile-image img {
     width: 200px;
+    max-width: 100%;
+    height: auto;
   }
 
   .profile-info {
     margin-top: 20px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .profile-container {
+    padding: 1.5rem;
+    margin: 0 10px;
   }
 }
 
-/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
+  /* Semua grid jadi 1 kolom */
   .grid-about,
-  .grid-gallery {
+  .grid-gallery,
+  .grid-event {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .home-txt,
-  .event-txt {
-    font-size: 18px;
+  .about-img,
+  .event-img,
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    margin: 0 auto;
+    display: block;
   }
 
-  .img-head {
-    height: 100px;
-  }
-
-  .img-head-ft {
-    height: 80px;
-  }
-
-  .scroll-top-btn {
-    bottom: 20px;
-    right: 20px;
-    padding: 12px;
-    font-size: 18px;
-  }
-
-  a {
-    font-size: 18px;
-  }
-}
-
-/* Small devices (max-width: 480px) */
-@media (max-width: 480px) {
-  header {
-    font-size: 20px;
-  }
-
-  a {
-    font-size: 16px;
-  }
-
-  .scroll-top-btn {
+  .card-about,
+  .card-event,
+  .card-gallery {
     padding: 10px;
-    font-size: 16px;
   }
 
-  .home-txt,
   .event-txt {
-    font-size: 16px;
+    font-size: 18px;
+    padding: 15px;
   }
 
   .profile-image img {
-    width: 150px;
+    width: 160px;
   }
 
   .profile-container {
     padding: 1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .event-txt {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .about-img,
+  .event-img,
+  .gallery-img {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .profile-image img {
+    width: 120px;
+  }
+
+  .card-about,
+  .card-event,
+  .card-gallery {
+    font-size: 14px;
+  }
+
+  .profile-info {
+    font-size: 14px;
+  }
+
+  .profile-container {
+    padding: 0.8rem;
+  }
+}
+
 
 
 
