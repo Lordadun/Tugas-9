@@ -322,129 +322,99 @@ article {
 }
 /* CONTACT */
 
-/* ==================== RESPONSIVE FIX UNTUK ABOUT, EVENT, GALLERY, CONTACT ==================== */
-
-@media (max-width: 992px) {
-  /* Grid kolom dikurangi di layar medium */
+/* Responsive adjustments */
+@media (max-width: 1200px) {
   .grid-about {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .grid-event,
-  .grid-gallery {
+  .grid-event {
     grid-template-columns: repeat(1, 1fr);
   }
+}
 
-  .card-about,
-  .card-event,
-  .card-gallery {
-    padding: 15px;
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
   }
 
-  .about-img,
-  .event-img,
-  .gallery-img {
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-home,
+  .card-event {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-img1,
+  .home-img2,
+  .event-img {
     width: 100%;
     height: auto;
-    padding: 10px;
-    margin: 0;
-  }
-
-  .event-txt {
-    padding: 20px;
-    font-size: 22px;
   }
 
   .profile-card {
     flex-direction: column;
     align-items: center;
-  }
-
-  .profile-image img {
-    width: 200px;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .profile-info {
-    margin-top: 20px;
-    padding: 0 10px;
     text-align: center;
   }
 
-  .profile-container {
-    padding: 1.5rem;
-    margin: 0 10px;
+  .grid-about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-gallery {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  /* Semua grid jadi 1 kolom */
-  .grid-about,
-  .grid-gallery,
-  .grid-event {
+  .grid-about {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .about-img,
-  .event-img,
-  .gallery-img {
-    width: 100%;
-    height: auto;
-    padding: 8px;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .card-about,
-  .card-event,
-  .card-gallery {
-    padding: 10px;
-  }
-
+  .home-txt,
   .event-txt {
-    font-size: 18px;
+    font-size: 20px;
     padding: 15px;
   }
 
   .profile-image img {
-    width: 160px;
-  }
-
-  .profile-container {
-    padding: 1rem;
+    width: 100%;
+    max-width: 200px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .img-head {
+    height: 100px;
+  }
+
+  .img-head-ft {
+    height: 70px;
+  }
+
+  .home-txt,
   .event-txt {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  .scroll-top-btn {
     padding: 10px;
-  }
-
-  .about-img,
-  .event-img,
-  .gallery-img {
-    width: 100%;
-    padding: 5px;
-  }
-
-  .profile-image img {
-    width: 120px;
-  }
-
-  .card-about,
-  .card-event,
-  .card-gallery {
-    font-size: 14px;
-  }
-
-  .profile-info {
-    font-size: 14px;
-  }
-
-  .profile-container {
-    padding: 0.8rem;
+    font-size: 16px;
   }
 }
 
