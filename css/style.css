@@ -264,7 +264,6 @@ article {
   justify-content: center;
   align-items: center;
   background-color: rgb(17, 17, 17);
-  padding: 20px
 }
 
 .profile-container {
@@ -323,6 +322,104 @@ article {
 }
 /* CONTACT */
 
+/* RESPONSIVE DESIGN */
+
+/* Untuk tablet landscape dan layar kecil (>= 992px) */
+@media (max-width: 992px) {
+  .grid-about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-event {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image img {
+    width: 200px;
+  }
+
+  .home-img1,
+  .home-img2,
+  .event-img,
+  .about-img,
+  .gallery-img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* Untuk layar mobile (>= 768px) */
+@media (max-width: 768px) {
+  .grid-about {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-home {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-home,
+  .card-event {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-txt,
+  .event-txt {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .img-head {
+    height: 100px;
+  }
+
+  .img-head-ft {
+    height: 80px;
+  }
+}
+
+/* Untuk layar sangat kecil (<= 480px) */
+@media (max-width: 480px) {
+  header {
+    font-size: 22px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  .scroll-top-btn {
+    padding: 10px;
+    font-size: 16px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
 
 
 
