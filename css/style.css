@@ -303,9 +303,6 @@ article {
 }
 /* CONTACT */
 
-
-
-
 /* JS */
 #scrollToTop {
   position: fixed;
@@ -319,7 +316,7 @@ article {
   font-size: 18px;
   border-radius: 25%;
   cursor: pointer;
-  display: none; 
+  display: none;
   transition: opacity 0.3s ease;
 }
 
