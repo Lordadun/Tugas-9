@@ -63,8 +63,16 @@ article {
 }
 
 /* INDEX */
-.content-home {
-  padding: 20px;
+.content-home,
+.content-event,
+.content-about,
+.content-gallery {
+  article {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 }
 
 .grid-home {
@@ -155,11 +163,10 @@ article {
 }
 /* ABOUT */
 
-/* EVENT */
-.content-event {
-  padding: 20px;
-}
 
+
+
+/* EVENT */
 .grid-event {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -205,6 +212,7 @@ article {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  width: 100%;
 }
 
 .card-gallery-reveal {
@@ -324,3 +332,80 @@ article {
   background-color: #555;
 }
 /* JS */
+
+
+
+
+/* MEDIA QUERIES */
+
+/* Small devices (phones, 0 - 600px) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .img-head,
+  .img-head-ft {
+    height: 80px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    padding: 5px;
+  }
+
+  .grid-home,
+  .grid-about,
+  .grid-event,
+  .grid-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .home-img1,
+  .home-img2,
+  .event-img,
+  .about-img,
+  .gallery-img {
+    height: auto;
+    width: 100%;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image img {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Medium devices (tablets, 601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .grid-about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-event {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Large devices (desktops, 1025px and up) */
+/* No changes necessary here unless you want to add enhancements */
