@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  // Munculkan tombol jika scroll > 100px
   $(window).scroll(function () {
     if ($(this).scrollTop() > 500) {
       $("#scrollToTop").fadeIn();
@@ -8,7 +7,6 @@ $(document).ready(function () {
     }
   });
 
-  // Saat diklik, scroll ke atas
   $("#scrollToTop").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
@@ -17,7 +15,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(".scroll-link").click(function (e) {
-    e.preventDefault(); // Mencegah aksi default anchor
+    e.preventDefault();
     var target = $(this).attr("href");
 
     $("html, body").animate(
@@ -25,7 +23,7 @@ $(document).ready(function () {
         scrollTop: $(target).offset().top,
       },
       800
-    ); // 800ms = durasi animasi
+    );
   });
 });
 
